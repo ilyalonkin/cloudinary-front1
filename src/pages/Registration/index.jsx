@@ -24,7 +24,7 @@ export const Registration = () => {
       const file = event.target.files[0];
       formData.append("image", file);
       const { data } = await axios.post("/upload", formData);
-      setAvatarURL(`http://localhost:4444${data.url}`);
+      setAvatarURL(`process.env.REACT_APP_API_URL${data.url}`);
     } catch (err) {
       console.warn(err);
       alert("Ошибка при загрузке файла");
