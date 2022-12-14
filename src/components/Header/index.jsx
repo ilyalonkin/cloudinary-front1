@@ -40,7 +40,7 @@ export const Header = () => {
 
   const uploadImage = async (base64EncodedImage) => {
     try {
-      await fetch(`${process.env.REACT_APP_API_URL}/api/upload`, {
+      await fetch(`${process.env.REACT_APP_API_URL}api/upload`, {
         method: "POST",
         body: JSON.stringify({ data: base64EncodedImage }),
         headers: { "Content-type": "application/json" },
