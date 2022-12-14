@@ -108,11 +108,7 @@ export const Home = () => {
                 key={obj._id}
                 id={obj._id}
                 title={obj.title}
-                imageUrl={
-                  obj.imageUrl
-                    ? `${process.env.REACT_APP_API_URL}${obj.imageUrl}`
-                    : ""
-                }
+                imageUrl={obj.imageUrl ? obj.imageUrl : ""}
                 user={obj.author}
                 createdAt={obj.createdAt}
                 viewsCount={obj.viewsCount}
