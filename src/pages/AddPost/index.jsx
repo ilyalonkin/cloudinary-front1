@@ -7,7 +7,7 @@ import SimpleMDE from "react-simplemde-editor";
 import "easymde/dist/easymde.min.css";
 import styles from "./AddPost.module.scss";
 import { useSelector } from "react-redux";
-import { selectIsAuth } from "../../Redux/slices/auth";
+import { fetchAuthMe, selectIsAuth } from "../../Redux/slices/auth";
 import { useNavigate, Navigate, useParams } from "react-router-dom";
 import axios from "../../axios";
 
@@ -24,13 +24,39 @@ export const AddPost = () => {
 
   const isEditing = Boolean(id);
 
-  const handleChangeFile = async (event) => {
+  // const handleChangeFile = async (event) => {
+  //   try {
+  //     const formData = new FormData();
+  //     const file = event.target.files[0];
+  //     formData.append("image", file);
+  //     const { data } = await axios.post("/upload", formData);
+  //     setImageUrl(data.url);
+  //   } catch (err) {
+  //     console.warn(err);
+  //     alert("Ошибка при загрузке файла");
+  //   }
+  // };
+
+  const handleChangeFile = async (e) => {
+    const file = e.target.files[0];
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onloadend = () => {
+      uploadImage(reader.result);
+    };
+  };
+
+  const uploadImage = async (base64EncodedImage) => {
     try {
-      const formData = new FormData();
-      const file = event.target.files[0];
-      formData.append("image", file);
-      const { data } = await axios.post("/upload", formData);
-      setImageUrl(data.url);
+      await fetch(`${process.env.REACT_APP_API_URL}api/upload`, {
+        method: "POST",
+        body: JSON.stringify({ data: base64EncodedImage }),
+        headers: { "Content-type": "application/json" },
+      })
+        .then((response) => response.json())
+        .then(async (data) => {
+          await setImageUrl(data.url);
+        });
     } catch (err) {
       console.warn(err);
       alert("Ошибка при загрузке файла");
