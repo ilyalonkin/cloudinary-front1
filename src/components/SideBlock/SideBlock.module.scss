@@ -1,0 +1,50 @@
+.root {
+  margin-bottom: 20px;
+  color: red;
+}
+
+.title {
+  padding: 15px 15px 0 15px;
+}
+
+.rootFull {
+  margin-bottom: 20px;
+  color: red;
+}
+
+.titleFull {
+  padding: 15px 15px 0 15px;
+}
+
+@media (max-width: 600px) {
+  .root {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .root {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .rootFull {
+    ul {
+      li {
+        img {
+          width: 30px;
+          height: 30px;
+          border-radius: 30px;
+          margin-right: 10px;
+        }
+        span {
+          font-size: 14px;
+        }
+        p {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

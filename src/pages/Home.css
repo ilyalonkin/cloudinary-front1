@@ -1,0 +1,13 @@
+.preloader {
+    width: 100%;
+    height: 487px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgLoader {
+    width: 150px;
+    height: 100px;
+}
+

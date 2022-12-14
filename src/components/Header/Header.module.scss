@@ -1,0 +1,134 @@
+.root {
+  background-color: #fff;
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 30px;
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  background-color: black;
+  color: #fff;
+  font-weight: 700;
+  line-height: 35px;
+  text-transform: uppercase;
+  letter-spacing: 0.15px;
+  border-radius: 5px;
+  padding: 0 10px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    background-color: #4361ee;
+  }
+}
+
+.menu1 {
+  display: none;
+}
+
+.buttons {
+  button {
+    margin-left: 10px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.buttonsActive {
+  button {
+    margin-left: 10px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.avatarInfo {
+  padding-right: 5px;
+}
+
+.avatarInfo:hover:after {
+  content: attr(data-name);
+  color: black;
+  text-align: center;
+  font-family: cursive;
+  font-size: 14px;
+}
+
+@media (max-width: 617px) {
+  .userInfo {
+    span {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 507px) {
+  .root {
+    padding: 10px 0;
+    margin: 0;
+  }
+  .inner {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .buttons {
+    display: none;
+    flex-direction: row;
+    justify-content: right;
+    background: white;
+  }
+  .buttonsActive {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    padding-top: 6px;
+  }
+  .box {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .logo {
+    display: flex;
+    justify-content: center;
+    width: 85%;
+    padding-left: 20%;
+    border-radius: 0px;
+  }
+  .menu1 {
+    display: block;
+    width: 15%;
+    background-color: black;
+    color: #fff;
+    font-weight: 700;
+    line-height: 35px;
+    text-transform: uppercase;
+    letter-spacing: 0.15px;
+    border-radius: 0px;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+
+    &:hover {
+      background-color: #4361ee;
+    }
+  }
+}
