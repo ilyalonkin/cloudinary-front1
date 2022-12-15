@@ -110,9 +110,7 @@ export const Home = () => {
                 title={obj.title}
                 imageUrl={obj.imageUrl ? obj.imageUrl : ""}
                 user={obj.author}
-                createdAt={() => {
-                  console.log(obj.createdAt);
-                }}
+                createdAt={obj.createdAt}
                 viewsCount={obj.viewsCount}
                 commentsCount={obj.commentsCount}
                 tags={obj.tags}
