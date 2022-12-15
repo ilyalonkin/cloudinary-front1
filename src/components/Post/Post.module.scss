@@ -191,13 +191,14 @@ $blue: #4361ee;
   .postDetails {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 2px 0 0 0;
 
     li {
       display: inline-flex;
       align-items: center;
       font-size: 12px;
       margin-right: 20px;
+      padding: 0;
       opacity: 0.5;
 
       svg {
