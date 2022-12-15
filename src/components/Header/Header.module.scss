@@ -70,6 +70,14 @@
   font-size: 14px;
 }
 
+@media (max-width: 617px) {
+  .userInfo {
+    span {
+      display: none;
+    }
+  }
+}
+
 @media (max-width: 507px) {
   .root {
     padding: 10px 0;
