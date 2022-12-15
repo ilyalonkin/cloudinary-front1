@@ -6,7 +6,7 @@
 }
 
 .field {
-  margin-bottom: 20px;
+  margin-bottom: 20px !important;
 }
 
 .title {
@@ -16,13 +16,7 @@
 }
 
 @media (max-width: 507px) {
-  .root {
-    div {
-      background-color: #4361ee;
-    }
-  }
-
-  .field {
-    margin-bottom: 100px !important;
+  div {
+    background-color: #4361ee;
   }
 }
