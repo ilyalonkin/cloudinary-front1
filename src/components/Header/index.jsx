@@ -70,7 +70,7 @@ export const Header = () => {
           <div className={styles.box}>
             <NavLink className={styles.logo} to="/">
               <span className={styles.logo1} onClick={rerenderHome}>
-                BULOCHKA BLOG
+                MERN BLOG
               </span>
             </NavLink>
             <span
