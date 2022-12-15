@@ -16,7 +16,9 @@
 }
 
 @media (max-width: 507px) {
-  .form {
-    background-color: #4361ee;
+  .root {
+    form {
+      background-color: #4361ee;
+    }
   }
 }
