@@ -6,7 +6,7 @@
 }
 
 .field {
-  margin-bottom: 20px !important;
+  margin-bottom: 20px;
 }
 
 .title {
@@ -20,5 +20,9 @@
     div {
       background-color: #4361ee;
     }
+  }
+
+  .field {
+    margin-bottom: 0px !important;
   }
 }
