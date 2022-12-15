@@ -10,11 +10,7 @@ import { CommentsBlock } from "../components/CommentsBlock";
 import { useDispatch, useSelector } from "react-redux";
 import { getComments } from "../Redux/slices/commentSlice";
 
-let renderCount = 0;
-
 export const FullPost = () => {
-  console.log(`Количество рендеров = ${++renderCount}`);
-
   const dispatch = useDispatch();
   const [data, setData] = useState();
   const [isLoading, setLoading] = useState(true);

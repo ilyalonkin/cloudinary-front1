@@ -42,7 +42,6 @@ export const AddPost = () => {
       })
         .then((response) => response.json())
         .then(async (data) => {
-          console.log(data.url);
           await setImageUrl(data.url);
         });
     } catch (err) {
