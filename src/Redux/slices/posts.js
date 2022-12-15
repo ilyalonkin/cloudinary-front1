@@ -39,9 +39,6 @@ const PostsSlice = createSlice({
     },
     [fetchPosts.fulfilled]: (state, action) => {
       state.posts.items = action.payload;
-      for (let key of state.posts.items) {
-        key.createdAt.toLocaleDateString("en-US");
-      }
       state.posts.status = "loaded";
     },
     [fetchPosts.rejected]: (state) => {
