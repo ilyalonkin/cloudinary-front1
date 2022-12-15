@@ -14,3 +14,11 @@
   font-weight: bold !important;
   margin-bottom: 30px !important;
 }
+
+@media (max-width: 507px) {
+  .root {
+    div {
+      background-color: #4361ee;
+    }
+  }
+}
