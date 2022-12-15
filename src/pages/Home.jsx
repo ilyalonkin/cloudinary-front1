@@ -111,7 +111,7 @@ export const Home = () => {
                 imageUrl={obj.imageUrl ? obj.imageUrl : ""}
                 user={obj.author}
                 createdAt={() => {
-                  obj.createdAt.toLocaleDateString("en-US");
+                  console.log(obj.createdAt);
                 }}
                 viewsCount={obj.viewsCount}
                 commentsCount={obj.commentsCount}
