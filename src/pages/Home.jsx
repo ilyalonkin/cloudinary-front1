@@ -110,7 +110,7 @@ export const Home = () => {
                 title={obj.title}
                 imageUrl={obj.imageUrl ? obj.imageUrl : ""}
                 user={obj.author}
-                createdAt={obj.createdAt}
+                createdAt={obj.createdAt.toLocaleDateString("en-US")}
                 viewsCount={obj.viewsCount}
                 commentsCount={obj.commentsCount}
                 tags={obj.tags}
