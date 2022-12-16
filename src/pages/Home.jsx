@@ -42,7 +42,6 @@ export const Home = () => {
 
   //Загрузка первых двух постов после полного получения данных
   useEffect(() => {
-    console.log(posts);
     setPostsItems([...posts.items.slice(0, 4)]);
     setStartIndex(4);
     setEndIndex(6);
