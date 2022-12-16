@@ -13,6 +13,7 @@ import { PostSkeleton } from "./Skeleton";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchRemovePost, getTagPosts } from "../../Redux/slices/posts";
 import { selectIsAuth } from "../../Redux/slices/auth";
+import { getLastComments } from "../../Redux/slices/commentSlice";
 
 export const Post = ({
   id,
@@ -45,6 +46,7 @@ export const Post = ({
   const onClickRemove = () => {
     if (window.confirm("Вы действительно хотите удалить статью?")) {
       dispatch(fetchRemovePost(id));
+      dispatch(getLastComments());
       navigate("/");
     }
   };
