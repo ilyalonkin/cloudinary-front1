@@ -24,7 +24,7 @@ export const FullPost = () => {
       .then((res) => {
         setData(res.data);
         // setData(...res.data, createdAt: data.createdAt.toISOString().substring(0, 10))
-        console.log(data);
+
         setLoading(false);
       })
       .catch((err) => {
@@ -41,6 +41,7 @@ export const FullPost = () => {
       </div>
     );
   } else {
+    console.log(data);
     return (
       <>
         <Post
