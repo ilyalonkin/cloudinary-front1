@@ -41,7 +41,6 @@ export const FullPost = () => {
       </div>
     );
   } else {
-    console.log(data);
     return (
       <>
         <Post
@@ -50,7 +49,7 @@ export const FullPost = () => {
           title={data.title}
           imageUrl={data.imageUrl ? data.imageUrl : ""}
           user={data.author}
-          createdAt={data.createdAt}
+          createdAt={data.createdAt.toISOString().substring(0, 10)}
           viewsCount={data.viewsCount}
           commentsCount={data.commentsCount}
           tags={data.tags}
