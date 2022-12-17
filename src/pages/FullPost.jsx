@@ -39,10 +39,6 @@ export const FullPost = () => {
       </div>
     );
   } else {
-    setData({
-      ...data,
-      createdAt: "123",
-    });
     return (
       <>
         <Post
