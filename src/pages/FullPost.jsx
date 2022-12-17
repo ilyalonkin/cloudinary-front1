@@ -12,7 +12,7 @@ import { getComments } from "../Redux/slices/commentSlice";
 
 export const FullPost = () => {
   const dispatch = useDispatch();
-  const [data, setData] = useState();
+  const [data, setData] = useState({});
   const [isLoading, setLoading] = useState(true);
   const { id } = useParams();
   const { comments } = useSelector((state) => state.comments);
@@ -22,7 +22,8 @@ export const FullPost = () => {
     axios
       .get(`/posts/${id}`)
       .then((res) => {
-        setData(res.data);
+        // setData(...res.data, createdAt: data.createdAt.toISOString().substring(0, 10))
+        console.log(data);
         setLoading(false);
       })
       .catch((err) => {
