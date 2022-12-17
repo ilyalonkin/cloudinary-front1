@@ -23,8 +23,6 @@ export const FullPost = () => {
       .get(`/posts/${id}`)
       .then((res) => {
         setData(res.data);
-        // setData(...res.data, createdAt: data.createdAt.toISOString().substring(0, 10))
-
         setLoading(false);
       })
       .catch((err) => {
@@ -41,6 +39,10 @@ export const FullPost = () => {
       </div>
     );
   } else {
+    setData({
+      ...data,
+      createdAt: data.createdAt.toISOString().substring(0, 10),
+    });
     return (
       <>
         <Post
@@ -49,7 +51,7 @@ export const FullPost = () => {
           title={data.title}
           imageUrl={data.imageUrl ? data.imageUrl : ""}
           user={data.author}
-          createdAt={data.createdAt.toISOString().substring(0, 10)}
+          createdAt={data.createdAt}
           viewsCount={data.viewsCount}
           commentsCount={data.commentsCount}
           tags={data.tags}
