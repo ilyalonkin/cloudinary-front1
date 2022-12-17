@@ -41,7 +41,7 @@ export const FullPost = () => {
   } else {
     setData({
       ...data,
-      createdAt: data.createdAt.toISOString().substring(0, 10),
+      createdAt: "123",
     });
     return (
       <>
