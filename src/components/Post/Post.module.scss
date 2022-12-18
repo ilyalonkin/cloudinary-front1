@@ -169,12 +169,17 @@ $blue: #4361ee;
     }
   }
 
+  .wrapper {
+    padding: 0;
+    margin: 0;
+  }
+
   .content {
     margin: 0;
     text-align: justify ;
-    
+
     p {
-      font-size: 12px;
+      font-size: 14px;
       line-height: 12px;
       text-align: justify ;
     }
