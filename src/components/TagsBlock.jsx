@@ -17,7 +17,7 @@ export const TagsBlock = ({ tags, isLoading = true }) => {
 
   const getPosts = (text) => {
     const name = {
-      name: text,
+      name: text.trim(),
     };
     dispatch(getTagPosts(name));
   };
