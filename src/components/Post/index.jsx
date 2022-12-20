@@ -44,11 +44,11 @@ export const Post = ({
     dispatch(getTagPosts(name));
   };
 
-  const onClickRemove = () => {
+  const onClickRemove = async () => {
     if (window.confirm("Вы действительно хотите удалить статью?")) {
-      dispatch(fetchRemovePost(id));
-      dispatch(getLastComments());
-      dispatch(fetchPosts(1));
+      await dispatch(fetchRemovePost(id));
+      await dispatch(getLastComments());
+      await dispatch(fetchPosts(1));
     }
   };
 
