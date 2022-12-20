@@ -37,8 +37,9 @@ export const Post = ({
   }
 
   const getPosts = (text) => {
+    navigate("/");
     const name = {
-      name: text,
+      name: text.trim(),
     };
     dispatch(getTagPosts(name));
   };
