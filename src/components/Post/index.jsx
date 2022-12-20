@@ -46,9 +46,9 @@ export const Post = ({
 
   const onClickRemove = () => {
     if (window.confirm("Вы действительно хотите удалить статью?")) {
+      navigate("/");
       dispatch(fetchRemovePost(id));
       dispatch(getLastComments());
-      navigate("/");
     }
   };
 
