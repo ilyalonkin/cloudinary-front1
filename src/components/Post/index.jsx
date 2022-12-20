@@ -36,12 +36,12 @@ export const Post = ({
     return <PostSkeleton />;
   }
 
-  const getPosts = (text) => {
-    navigate("/");
+  const getPosts = async (text) => {
+    await navigate("/");
     const name = {
       name: text.trim(),
     };
-    dispatch(getTagPosts(name));
+    await dispatch(getTagPosts(name));
   };
 
   const onClickRemove = async () => {
