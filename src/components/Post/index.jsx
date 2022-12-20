@@ -11,7 +11,7 @@ import styles from "./Post.module.scss";
 import { UserInfo } from "../UserInfo";
 import { PostSkeleton } from "./Skeleton";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchRemovePost, getTagPosts } from "../../Redux/slices/posts";
+import {fetchPosts, fetchRemovePost, getTagPosts} from "../../Redux/slices/posts";
 import { selectIsAuth } from "../../Redux/slices/auth";
 import { getLastComments } from "../../Redux/slices/commentSlice";
 
@@ -46,9 +46,9 @@ export const Post = ({
 
   const onClickRemove = () => {
     if (window.confirm("Вы действительно хотите удалить статью?")) {
-      navigate("/");
       dispatch(fetchRemovePost(id));
       dispatch(getLastComments());
+      dispatch(fetchPosts(1));
     }
   };
 
