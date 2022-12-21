@@ -73,7 +73,7 @@ export const Post = ({
           className={clsx(styles.image, { [styles.imageFull]: isFullPost })}
           src={imageUrl}
           alt={title}
-          style={{ cursor: "pointer" }}
+          style={isFullPost ? { cursor: "default" }: { cursor: "pointer" }}
           onClick={() => {navigate(`/posts/${id}`)}}
         />
       )}
