@@ -73,6 +73,7 @@ export const Post = ({
           className={clsx(styles.image, { [styles.imageFull]: isFullPost })}
           src={imageUrl}
           alt={title}
+          style={{ cursor: "pointer" }}
         />
       )}
       <div className={styles.wrapper}>
