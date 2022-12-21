@@ -74,6 +74,7 @@ export const Post = ({
           src={imageUrl}
           alt={title}
           style={{ cursor: "pointer" }}
+          onClick={() => <Link to={`/posts/${id}`}/>}
         />
       )}
       <div className={styles.wrapper}>
