@@ -74,7 +74,7 @@ export const Post = ({
           src={imageUrl}
           alt={title}
           style={{ cursor: "pointer" }}
-          onClick={() => <Link to={`/posts/${id}`}/>}
+          onClick={() => {navigate(`/posts/${id}`)}}
         />
       )}
       <div className={styles.wrapper}>
